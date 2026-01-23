@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sr2csd"
+version = "0.1.0"
+description = "SR²-CSD: Spatially Regularized Super-Resolved Constrained Spherical Deconvolution of diffusion MRI data"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [{name = "Ekin Taskin"}]
+
+dependencies = [
+  "numpy>=1.21",
+  "scipy>=1.7",
+  "dipy>=1.6,<1.8"
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
