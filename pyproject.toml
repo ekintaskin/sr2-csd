@@ -14,7 +14,8 @@ authors = [{name = "Ekin Taskin"}]
 dependencies = [
   "numpy>=1.21",
   "scipy>=1.7",
-  "dipy>=1.6,<1.8"
+  "dipy>=1.6,<1.8",
+  "qpsolvers"
 ]
 
 [project.optional-dependencies]
