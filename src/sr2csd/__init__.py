@@ -1,3 +1,6 @@
 """SR²-CSD: Spatially Regularized Super-Resolved Spherical Deconvolution."""
 
-__version__ = "0.1.0"
+from .core.fit_qp import fit_qp
+from .model import SR2CSDModel
+
+__all__ = ["fit_qp", "SR2CSDModel"]
