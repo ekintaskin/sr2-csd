@@ -6,6 +6,7 @@ from .core.fit_qp import fit_qp
 from .core.csdeconv_mrtrix import csdeconv_mrtrix
 from .utils.multi_voxel import multi_voxel_fit_qp
 
+
 class SR2CSDModel(ConstrainedSphericalDeconvModel):
     """
     SR²-CSD model implemented on top of DIPY's CSD model.
@@ -16,7 +17,14 @@ class SR2CSDModel(ConstrainedSphericalDeconvModel):
     """
 
     def __init__(self, gtab, response, sh_order, *, rho, tau=0.1, convergence=50, eta=1.0, **kwargs):
-        super().__init__(gtab, response, sh_order, **kwargs)
+        super().__init__(
+            gtab,
+            response,
+            sh_order=sh_order,
+            tau=tau,
+            convergence=convergence,
+            **kwargs,
+        )
         self.rho = float(rho)
         self.tau = float(tau)
         self.convergence = int(convergence)
@@ -50,7 +58,7 @@ class SR2CSDModel(ConstrainedSphericalDeconvModel):
             P=self._P,
         )
 
-        # (2) SR²-CSD QP step (your implementation)
+        # (2) SR²-CSD QP step
         shm_coeff = fit_qp(
             dwi_data,
             voxel_sh,
@@ -58,8 +66,6 @@ class SR2CSDModel(ConstrainedSphericalDeconvModel):
             X=self._X,
             B_reg=self.B_reg,
             tau=self.tau,
-            P=self._P,
-            convergence=self.convergence,
         )
 
         return SphHarmFit(self, shm_coeff, None)
