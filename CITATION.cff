@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If this software contributes to your work, please cite the following publication."
+title: "SR²-CSD: Spatially Regularized Super-Resolved Constrained Spherical Deconvolution"
+type: software
+
+authors:
+  - family-names: Taskin
+    given-names: Ekin
+  - family-names: Girard
+    given-names: Gabriel
+  - family-names: Villarreal Haro
+    given-names: Juan Luis
+  - family-names: Rafael-Patiño
+    given-names: Jonathan
+  - family-names: Garyfallidis
+    given-names: Eleftherios
+  - family-names: Thiran
+    given-names: Jean-Philippe
+  - family-names: Canales-Rodríguez
+    given-names: Erick Jorge
+
+doi: 10.1016/j.neuroimage.2025.121656
+journal: NeuroImage
+volume: 325
+year: 2026
+pages: 121656
+
+license: BSD-3-Clause
+repository-code: "https://github.com/ekintaskin/sr2-csd"
