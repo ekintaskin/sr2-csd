@@ -13,7 +13,7 @@ authors = [{name = "Ekin Taskin"}]
 
 dependencies = [
   "numpy>=1.21, <2.0",
-  "scipy>=1.7",
+  "scipy>=1.7, <1.17",
   "dipy>=1.6,<1.8",
   "scikit-image>=0.19",
   "PyWavelets>=1.4",
