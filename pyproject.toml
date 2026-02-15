@@ -17,8 +17,8 @@ dependencies = [
   "dipy>=1.6,<1.8",
   "scikit-image>=0.19",
   "PyWavelets>=1.4",
-  "qpsolvers==4.0.1",
-  "quadprog==0.1.11"
+  "qpsolvers",
+  "quadprog"
 ]
 
 [project.optional-dependencies]
