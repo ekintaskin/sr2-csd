@@ -59,7 +59,7 @@ model = SR2CSDModel(
     gtab,
     response,
     sh_order=12,
-    rho=0.1,
+    rho=1.0,
     tau=0.1,
     convergence=30,
     eta=1.0,
