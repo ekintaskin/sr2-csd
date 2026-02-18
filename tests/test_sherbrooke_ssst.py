@@ -3,6 +3,7 @@
 import ssl
 import sys
 from pathlib import Path
+from typing import Tuple
 from urllib.error import URLError
 
 import numpy as np
@@ -23,7 +24,7 @@ from sr2csd.utils.response import select_voxel
 from sr2csd.utils.sh_basis import convert_sh_descoteaux_tournier
 
 
-def _get_sherbrooke_fnames() -> tuple[str, str, str]:
+def _get_sherbrooke_fnames() -> Tuple[str, str, str]:
     try:
         return get_fnames("sherbrooke_3shell")
     except URLError:
